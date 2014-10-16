@@ -8,7 +8,7 @@ php:
 
 env:
   global:
-  - secure: FMDbDiXaSfyaVMtuHsWmtRS6HZPBtTWD+kIIKtdkzCqJewAGGn0GhOayPKuEyi9I6BCk1GIWLnrpLmPno9QbpV8bZxRY0xQXRPslCQV1DxWgRBamVckA8EOfjE7irDwrzAoymhJJrlrCz0zCFt7k0G6EuESk+jJN9FsclfXbqZU=
+    secure: VW0X0yHtUxSH2afnKu5xzqlhQHXfpYlpE9D+T2g4+2k7RVUiU/M1C+r/0XrLkLNxIUrqj/d8eYWKGuH6TEJs6Rvk65FjkNZhvHYIFW5isGQAgh6fLo3xpG8QJpwSsTrcPyMjDdl/HdEKDbwMP1bHYZuu7Hy6PMfCJc/0J/2Kl/E=
 
 # http://stackoverflow.com/questions/18027115/committing-via-travis-ci-failing
 script:
