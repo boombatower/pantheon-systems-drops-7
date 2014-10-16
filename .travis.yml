@@ -12,6 +12,8 @@ env:
 
 # http://stackoverflow.com/questions/18027115/committing-via-travis-ci-failing
 script:
+  - git config --global user.email "thor@boombatower.com"
+  - git config --global user.name "Supreme Commander Thor"
   - git clone https://github.com/boombatower/git-squash-tags.git
   - git clone https://github.com/pantheon-systems/drops-7.git
   - cd drops-7
