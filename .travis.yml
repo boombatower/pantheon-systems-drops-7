@@ -1,0 +1,20 @@
+# Utilize https://github.com/boombatower/git-squash-tags to squash
+# https://github.com/pantheon-systems/drops-7 and push to master-squash branch.
+
+language: php
+
+php:
+  - 5.4
+
+env:
+  global:
+  - secure: FMDbDiXaSfyaVMtuHsWmtRS6HZPBtTWD+kIIKtdkzCqJewAGGn0GhOayPKuEyi9I6BCk1GIWLnrpLmPno9QbpV8bZxRY0xQXRPslCQV1DxWgRBamVckA8EOfjE7irDwrzAoymhJJrlrCz0zCFt7k0G6EuESk+jJN9FsclfXbqZU=
+
+# http://stackoverflow.com/questions/18027115/committing-via-travis-ci-failing
+script:
+  - git clone https://github.com/pantheon-systems/drops-7.git
+  - cd drops-7
+  - ../git-squash-tags 7*
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+  - git push -f origin master-squash
