@@ -5,6 +5,12 @@ Squashed mirror of [pantheon-systems/drops-7](https://github.com/pantheon-system
 Uses [boombatower/git-squash-tags](https://github.com/boombatower/git-squash-tags) to squash all
 the commits down to one per tag.
 
+Caveat
+------
+Any commits after that last Drupal core release tag are ignored and will not be picked up until the
+next Drupal core release. There is no clean workaround short of pantheon folks providing their own
+release tags.
+
 Usage
 -----
 Clone the `7.x-squash` branch.
