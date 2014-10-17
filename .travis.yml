@@ -1,5 +1,5 @@
 # Utilize https://github.com/boombatower/git-squash-tags to squash
-# https://github.com/pantheon-systems/drops-7 and push to master-squash branch.
+# https://github.com/pantheon-systems/drops-7 and push to 7.x-squash branch.
 
 language: php
 
@@ -19,8 +19,9 @@ script:
   - cd drops-7
   - git remote add drupal https://github.com/drupal/drupal.git
   - git fetch --tags drupal 7.x # pull in core release tags since pantheon guys don't
+  - git branch -m master 7.x # rename to be consistent with core
   - ../git-squash-tags/git-squash-tags 7*
   - git remote add boombatower https://github.com/boombatower/pantheon-systems-drops-7.git
   - git config credential.helper "store --file=.git/credentials"
   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
-  - git push -f boombatower master-squash
+  - git push -f boombatower 7.x-squash
