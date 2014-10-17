@@ -17,6 +17,8 @@ script:
   - git clone https://github.com/boombatower/git-squash-tags.git
   - git clone https://github.com/pantheon-systems/drops-7.git
   - cd drops-7
+  - git remote add drupal https://github.com/drupal/drupal.git
+  - git fetch --tags drupal 7.x # pull in core release tags since pantheon guys don't
   - ../git-squash-tags/git-squash-tags 7*
   - git remote add boombatower https://github.com/boombatower/pantheon-systems-drops-7.git
   - git config credential.helper "store --file=.git/credentials"
